@@ -1,0 +1,130 @@
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Estilo do cabeçalho */
+header {
+    background-color: #15cb31;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 1rem;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+/* Seção de curiosidades */
+.curiosidades {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+/* Cartões de curiosidades */
+.curiosidade-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.curiosidade-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Rodapé */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+/* Estilo principal da seção */
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+/* Introdução */
+.intro {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Estilo para a seção de curiosidades */
+.curiosidades {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* Melhorando responsividade */
+@media (max-width: 768px) {
+    .curiosidades {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* Estilo para os cards de curiosidades */
+.curiosidade-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Corrigido o erro da linha 42 */
+    padding: 1rem;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adicionada transição suave no box-shadow */
+}
+
+/* Efeito de hover para os cards */
+.curiosidade-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Somente ao passar o mouse, o box-shadow é mais intenso */
+}
+
+/* Estilo para os títulos dentro dos cards */
+.curiosidade-card h3 {
+    color: #0077cc;
+}
+/* Estilo para os cards de curiosidades */
+.curiosidade-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito de hover para os cards */
+.curiosidade-card:hover {
+    transform: scale(1.05) rotate(3deg); /* Efeito de rotação leve */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Sombra mais intensa no hover */
+}
+
+/* Estilo para os títulos dentro dos cards */
+.curiosidade-card h3 {
+    color: #0077cc;
+    font-size: 1.5rem; /* Aumentando o tamanho do título */
+    font-weight: bold; /* Deixando o título em negrito */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .curiosidade-card {
+        width: 90%; /* Os cards ocupam 90% da largura da tela em dispositivos pequenos */
+    }
+}

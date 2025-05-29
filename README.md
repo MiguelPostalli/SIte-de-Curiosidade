@@ -1,2 +1,2 @@
-# SIte-de-Curiosidade
-Atividade 2°Tri
+# Curiosidades
+Site sobre Curiosidades e fatos interressantes
