@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Curiosidades Incríveis</title>
+
+  <!-- Google Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Curiosidades Incríveis</h1>
+
+    <button
+      id="menu-toggle"
+      aria-label="Alternar menu"
+      aria-expanded="false"
+      aria-controls="menu-principal"
+    >
+      &#9776;
+    </button>
+
+    <nav id="menu-principal" aria-label="Menu principal" aria-expanded="false">
+      <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#curiosidades">Curiosidades</a></li>
+        <li><a href="#videos">Vídeos</a></li>
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#links">Links úteis</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio" aria-label="Mensagem principal">
+      <h2>Explore as curiosidades mais fascinantes do planeta!</h2>
+    </section>
+
+    <section
+      id="curiosidades"
+      class="curiosidades"
+      aria-label="Lista de curiosidades"
+    >
+      <article class="curiosidade-card" tabindex="0">
+        <h3>Você sabia?</h3>
+        <p>O polvo tem três corações e o sangue azul!</p>
+        <img src="polvo.webp" alt="polvo" loading="lazy" width="300"/>
+      </article>
+
+      <article class="curiosidade-card" tabindex="0">
+        <h3>Fato curioso</h3>
+        <p>A Lua se afasta da Terra cerca de 3,8 cm por ano.</p>
+        <img src="lua.webp" alt="Lua" loading="lazy" width="300" />
+      </article>
+
+      <article class="curiosidade-card" tabindex="0">
+        <h3>Inacreditável!</h3>
+        <p>
+          Existem mais estrelas no universo do que grãos de areia em todas as
+          praias da Terra.
+        </p>
+        <img src="areia.webp" alt="Grãos de areia" loading="lazy" />
+      </article>
+    </section>
+
+    <section
+      id="videos"
+      class="video-section"
+      aria-label="Vídeos relacionados às curiosidades"
+    >
+      <h2>Veja também:</h2>
+      <p>Assista a um vídeo cheio de curiosidades interessantes!</p>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/3hpBUzZk1VQ?si=lw4mMh00uS3su8ZM"
+        title="Vídeo do YouTube sobre curiosidades"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+        loading="lazy"
+      ></iframe>
+    </section>
+
+    <section id="galeria" class="galeria" aria-label="Galeria de imagens">
+      <h2>Galeria</h2>
+      <figure>
+        <img src="terra.jpg" alt="Planeta Terra" loading="lazy" />
+        <figcaption>Planeta Terra</figcaption>
+      </figure>
+      <figure>
+        <img
+          src="imagem3.jpg"
+          alt="Descrição da Imagem 3"
+          width="300"
+          loading="lazy"
+        />
+        <figcaption>Descrição da Imagem 3</figcaption>
+      </figure>
+    </section>
+
+    <section id="links" class="links-uteis" aria-label="Links úteis">
+      <h2>Links úteis</h2>
+      <ul>
+        <li>
+          <a
+            href="https://pt.wikipedia.org/wiki/Curiosidades"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Curiosidades na Wikipédia</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.nationalgeographic.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            >National Geographic</a
+          >
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      Site desenvolvido por Alex Ferreira Novaes, Colégio Estadual Vicente Rijo,
+      Londrina - PR
+    </p>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const menuPrincipal = document.getElementById("menu-principal");
+
+    menuToggle.addEventListener("click", () => {
+      const isExpanded =
+        menuToggle.getAttribute("aria-expanded") === "true" || false;
+      menuToggle.setAttribute("aria-expanded", !isExpanded);
+      if (!isExpanded) {
+        menuPrincipal.setAttribute("aria-expanded", "true");
+      } else {
+        menuPrincipal.setAttribute("aria-expanded", "false");
+      }
+    });
+  </script>
+</body>
+</html>

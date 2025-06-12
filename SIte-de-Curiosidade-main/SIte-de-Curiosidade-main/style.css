@@ -1,0 +1,235 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fonte e cores gerais */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 1rem 2rem;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  margin-bottom: 0.5rem;
+}
+
+/* Navegação */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+nav ul li a {
+  color: #ecf0f1;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  background-color: #34495e;
+  outline: none;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, #2980b9, #6dd5fa);
+  color: white;
+  padding: 3rem 2rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+/* Main content */
+main {
+  flex: 1;
+  max-width: 1100px;
+  margin: 0 auto 2rem auto;
+  padding: 0 1rem;
+}
+
+/* Introdução */
+.intro p {
+  font-size: 1.25rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+/* Curiosidades */
+.curiosidades {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.curiosidade-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.curiosidade-card:hover,
+.curiosidade-card:focus-within {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+}
+
+.curiosidade-card h3 {
+  margin-bottom: 0.8rem;
+  color: #2980b9;
+}
+
+.curiosidade-card p {
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+.curiosidade-card img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* Seção de vídeos */
+.video-section {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.video-section h2 {
+  color: #2980b9;
+  margin-bottom: 0.5rem;
+}
+
+.video-section p {
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+/* Galeria */
+.galeria {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.galeria h2 {
+  color: #2980b9;
+  margin-bottom: 1rem;
+}
+
+.galeria figure {
+  display: inline-block;
+  margin: 0 1rem 1.5rem 1rem;
+  max-width: 300px;
+}
+
+.galeria img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+figcaption {
+  margin-top: 0.5rem;
+  font-style: italic;
+  color: #666;
+}
+
+/* Links úteis */
+.links-uteis {
+  max-width: 600px;
+  margin: 0 auto 3rem auto;
+  padding: 0 1rem;
+}
+
+.links-uteis h2 {
+  color: #2980b9;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.links-uteis ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.links-uteis ul li {
+  margin-bottom: 0.8rem;
+}
+
+.links-uteis ul li a {
+  color: #2980b9;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.links-uteis ul li a:hover,
+.links-uteis ul li a:focus {
+  color: #1c5980;
+  outline: none;
+}
+
+/* Rodapé */
+footer {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  text-align: center;
+  padding: 1rem 1rem;
+  font-size: 0.9rem;
+  border-top: 3px solid #2980b9;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .curiosidades {
+    grid-template-columns: 1fr;
+  }
+
+  .video-section iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+  }
+
+  .galeria figure {
+    max-width: 100%;
+    margin: 0 0 1rem 0;
+  }
+}
